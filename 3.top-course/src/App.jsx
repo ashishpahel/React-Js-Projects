@@ -5,7 +5,8 @@ import { toast } from "react-hot-toast";
 import Navbar from "./components/Navbar";
 import Filter from "./components/Filter";
 import Cards from "./components/Cards";
-import Spinner from "react-bootstrap/Spinner";
+import Spinner from 'react-bootstrap/Spinner';
+
 
 function App() {
   const [courses, setCourses] = useState([]);
@@ -44,7 +45,7 @@ function App() {
         </div>
         <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh">
           {loading ? (
-            <Spinner animation="border" />
+            <Spinner animation="border" variant="light"/>
           ) : (
             <Cards courses={courses} category={category} />
           )}
